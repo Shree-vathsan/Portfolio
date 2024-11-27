@@ -9,16 +9,15 @@ const MyWork = () => {
             <h1>My latest Work</h1>
         </div>
         <div className="mywork-container">
-            {mywork_data.map((work,index)=>{
-                return <img key={index} src={work.w_img} alt=""/>
-            }
-            )}
+            {mywork_data.map((work, index) => {
+                return <img key={index} src={work.w_img} alt="Work" />
+            })}
         </div>
-        <div className=" ">
+        <div className="show-more">
           <p>Show more</p>
         </div>
     </div>
   )
 }
 
-export default MyWork
+export default MyWork;

@@ -1,41 +1,41 @@
+/* Original CSS */
 
-.hero{
+/* Hero Section */
+.hero {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
 }
-.hero img{
+
+.hero img {
     clip-path: circle();
     margin-top: 1.5em;
 }
-/* .hero h1 span{
-    text-align: center;
-    width:70%;
-    font-size:75px;
-    font-weight: 600;
-    color: #61677A;
 
-} */
+/* Gradient Text for Hero */
 .hero h1 span {
-     /* Required for the gradient to apply correctly */
     text-align: center;
     width: 70%;
     font-size: 75px;
     font-weight: 600;
-    color: transparent; /* Make the text color transparent to show the gradient */
-    background: linear-gradient(to right, #5c5c5c, #3F2305); /* Adjust gradient colors as needed */
-    -webkit-background-clip: text; /* Required for gradient text on WebKit browsers */
-    background-clip: text; /* Standard property */
+    color: transparent;
+    background: linear-gradient(to right, #5c5c5c, #3F2305); /* Gradient applied */
+    -webkit-background-clip: text; /* Webkit specific */
+    background-clip: text; /* Standard property for background clip */
 }
-.hero p{
+
+/* Hero Paragraph */
+.hero p {
     width: 50%;
     color: #3F2305;
     text-align: center;
     font-size: 20px;
     line-height: 25px;
 }
-.hero-action{
+
+/* Hero Action Section */
+.hero-action {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -43,23 +43,86 @@
     font-weight: 500;
     margin-bottom: 50px;
 }
-.hero-connect{
+
+/* Hero Connect Button */
+.hero-connect {
     padding: 20px 40px;
     color: #F2EAD3;
     border-radius: 40px;
     background: linear-gradient(264deg, #726e60, #3F2305);
     cursor: pointer;
 }
-.hero-resume{
+
+/* Hero Resume Button */
+.hero-resume {
     padding: 18px 60px;
     border: 2px solid #3F2305;
     border-radius: 40px;
     cursor: pointer;
 }
-.hero-connect:hover{
+
+/* Hover Effect for Hero Connect Button */
+.hero-connect:hover {
     border: 1px solid #3F2305;
 }
-.hero-resume:hover{
-    border:3px solid #3F2305;
+
+/* Hover Effect for Hero Resume Button */
+.hero-resume:hover {
+    border: 3px solid #3F2305;
     font-weight: 550;
+}
+
+
+/* Mobile-Responsive Styles */
+
+/* For small screens (mobile phones) */
+@media(max-width: 768px) {
+
+    .hero {
+        gap: 15px;
+    }
+
+    .hero h1 span {
+        font-size: 50px;
+        width: 90%;
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .hero-action {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero-connect, .hero-resume {
+        padding: 15px 35px;
+        font-size: 16px;
+    }
+}
+
+/* For extra small screens (smaller mobile devices) */
+@media(max-width: 480px) {
+
+    .hero h1 span {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .hero p {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .hero-action {
+        gap: 15px;
+    }
+
+    .hero-connect, .hero-resume {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
 }

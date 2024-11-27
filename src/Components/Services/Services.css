@@ -1,4 +1,4 @@
-.services{
+.services {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,20 +6,21 @@
     gap: 30px;
     color: #3F2305;
     margin: 80px 170px;
-
 }
-.services-title{
+
+.services-title {
     position: relative;
     color: #3F2305;
 }
-.services-title h1{
+
+.services-title h1 {
     color: #3F2305;
     padding: 0px 30px;
     font-size: 40px;
     font-weight: 600;
-
 }
-.services-format{
+
+.services-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,43 +31,116 @@
     transition: 0.4s;
     cursor: pointer;
 }
-.service-container{
+
+.service-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 80px;
 }
-.services-format h3{
-    
+
+.services-format h3 {
     font-size: 28px;
     font-weight: 600;
 }
-.services-format h2{
+
+.services-format h2 {
     font-size: 30px;
     font-weight: 800;
-    background: linear-gradient(270deg,#3F2305 50%,#a45806 100%);
+    background: linear-gradient(270deg, #3F2305 50%, #a45806 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.services-format p{
+
+.services-format p {
     color: #3F2305;
     font-size: 18px;
     line-height: 20px;
     max-width: 300px;
-
 }
-.services-readmore{
+
+.services-readmore {
     display: flex;
     color: #3F2305;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
-
 }
-.services-format:hover{
+
+.services-format:hover {
     border: 2px solid #3F2305;
-    background-image: linear-gradient(45deg, #3f230556 50%,#DFD7BF  100%);
+    background-image: linear-gradient(45deg, #3f230556 50%, #DFD7BF 100%);
     transform: scale(1.05);
     transition: 0.4s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .services {
+        margin: 50px 20px; /* Reduce margin for smaller screens */
+    }
+
+    .services-title h1 {
+        font-size: 28px; /* Smaller font size for the title */
+        padding: 0px 10px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+    }
+
+    .services-format {
+        padding: 30px; /* Reduce padding for mobile */
+    }
+
+    .services-format h3 {
+        font-size: 24px; /* Adjust font size for headings */
+    }
+
+    .services-format h2 {
+        font-size: 26px; /* Adjust font size for subheadings */
+    }
+
+    .services-format p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+        max-width: 250px; /* Reduce the max-width for better readability */
+    }
+
+    .services-readmore {
+        flex-direction: column; /* Stack the "Read More" button on mobile */
+        align-items: flex-start;
+    }
+}
+
+/* Very small screen responsiveness (like mobile phones) */
+@media (max-width: 480px) {
+    .services-title h1 {
+        font-size: 24px; /* Even smaller font size for the title */
+    }
+
+    .service-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .services-format {
+        padding: 20px; /* Further reduce padding */
+    }
+
+    .services-format h3 {
+        font-size: 22px; /* Smaller font size for headings */
+    }
+
+    .services-format h2 {
+        font-size: 24px; /* Adjust font size for subheadings */
+    }
+
+    .services-format p {
+        font-size: 14px; /* Even smaller font size for paragraphs */
+        max-width: 200px; /* Reduce max-width for better readability */
+    }
+
+    .services-readmore {
+        gap: 10px; /* Reduce gap between icons and text */
+    }
 }
