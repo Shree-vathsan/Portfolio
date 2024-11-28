@@ -13,7 +13,7 @@
   }
   
   .mywork-title h1 {
-    color: #3F2305;
+    color: #000000;
     padding: 0 60px;
     font-size: 40px;
     font-weight: 600;
@@ -36,7 +36,7 @@
   
   .mywork-container img:hover {
     transform: scale(1.1);
-    border: 2px solid #3F2305;
+    border: 2px solid #000000;
     border-radius: 10px;
     transition: 0.3s;
   }
@@ -46,7 +46,7 @@
     display: flex;
     gap: 15px;
     border-radius: 50px;
-    border: 2px solid #3F2305;
+    border: 2px solid #000000;
     padding: 15px 30px;
     font-size: 22px;
     font-weight: 500;

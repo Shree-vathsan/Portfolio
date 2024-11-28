@@ -19,7 +19,7 @@
     padding: 0px 30px;
     font-size: 40px;
     font-weight: 600;
-    color: #3F2305;
+    color: #000000;
 }
 
 /* Contact Section Layout */
@@ -39,7 +39,7 @@
     font-size: 40px;
     font-weight: 700;
     color: #3F2305;
-    background: linear-gradient(270deg, #3F2305 80%, #e27909 100%);
+    background: linear-gradient(270deg, #000000 80%, #4a4a4a 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -47,7 +47,7 @@
 
 .contact-left p {
     max-width: 500px;
-    color: #3F2305;
+    color: #000000;
     font-size: 20px;
     line-height: 15px;
 }
@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: #d8d8d8;
+    color: #ffffff;
     font-size: 18px;
 }
 
@@ -78,7 +78,7 @@
 .contact-right label {
     font-size: 22px;
     font-weight: 500;
-    color: #3F2305;
+    color: #000000;
 }
 
 .contact-right input {
@@ -87,8 +87,8 @@
     height: 60px;
     padding-left: 20px;
     border-radius: 5px;
-    background-color: #fff3e7;
-    color: #3F2305;
+    background-color: #ffffff;
+    color: #000000;
     font-family: Outfit;
     font-size: 18px;
 }
@@ -98,8 +98,8 @@
     border: none;
     padding: 25px;
     border-radius: 5px;
-    background-color: #fff3e7;
-    color: #3F2305;
+    background-color: #ffffff;
+    color: #000000;
     font-family: Outfit;
     font-size: 18px;
 }
@@ -107,7 +107,7 @@
 /* Contact Submit Button */
 .contact-submit {
     border: none;
-    color: #fff3e7;
+    color: #ffffff;
     border-radius: 50px;
     font-size: 18px;
     margin-top: 20px;
@@ -115,7 +115,7 @@
     margin-bottom: 50px;
     cursor: pointer;
     transition: 0.3s;
-    background: linear-gradient(264deg, #3F2305 -5.09%, #e27909 106.28%);
+    background: linear-gradient(264deg, #000000 -5.09%, #464646 106.28%);
 }
 
 .contact-submit:hover {

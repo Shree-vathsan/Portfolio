@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 50px;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -55,7 +55,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: orange;
+  background-color: rgb(0, 0, 0);
   visibility: hidden;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -67,12 +67,12 @@
 }
 
 .nav-menu p:hover {
-  color: orange;
+  color: rgb(0, 191, 255);
 }
 
 /* Active Link */
 .nav-menu p.active {
-  color: orange;
+  color: rgb(0, 191, 255);
 }
 
 /* Mobile Menu - Open Button */
