@@ -219,3 +219,6 @@
         font-size: 40px;
     }
 }
+#about {
+    scroll-margin-top: 90px; /* Adjust this value to match the navbar height */
+}

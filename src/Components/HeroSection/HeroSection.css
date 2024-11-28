@@ -17,10 +17,11 @@
 .hero h1 span {
     text-align: center;
     width: 70%;
-    font-size: 75px;
+    font-size: 65px;
+    font-family: "Charm", cursive;
     font-weight: 600;
     color: transparent;
-    background: linear-gradient(to right, #5c5c5c, #3F2305); /* Gradient applied */
+    background: linear-gradient(to right, #242424, #787878); /* Gradient applied */
     -webkit-background-clip: text; /* Webkit specific */
     background-clip: text; /* Standard property for background clip */
 }
@@ -32,6 +33,7 @@
     text-align: center;
     font-size: 20px;
     line-height: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Hero Action Section */
@@ -125,4 +127,8 @@
         padding: 12px 30px;
         font-size: 14px;
     }
+}
+/* Add scroll margin to the home section */
+#home {
+    scroll-margin-top: 80px; /* Adjust this value to match the navbar height */
 }

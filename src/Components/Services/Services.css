@@ -47,7 +47,7 @@
 .services-format h2 {
     font-size: 30px;
     font-weight: 800;
-    background: linear-gradient(270deg, #3F2305 50%, #a45806 100%);
+    background: linear-gradient(270deg, #000000 50%, #a45806 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,4 +143,7 @@
     .services-readmore {
         gap: 10px; /* Reduce gap between icons and text */
     }
+}
+#services {
+    scroll-margin-top: 90px; /* Adjust this value to match the navbar height */
 }

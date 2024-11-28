@@ -114,4 +114,7 @@
       padding: 10px 20px;
     }
   }
+  #work {
+    scroll-margin-top: 90px; /* Adjust this based on your navbar height */
+  }
   

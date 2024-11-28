@@ -205,3 +205,6 @@
         font-size: 14px;
     }
 }
+#contact{
+    scroll-margin-top: 90px; /* Adjust this value to match the navbar height */
+}
