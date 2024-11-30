@@ -1,120 +1,219 @@
+/* General Reset */
+* {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General Styles for MyWork */
 .mywork {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin: 80px 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 80px 170px;
+}
+
+.mywork-title {
+  position: relative;
+}
+
+.mywork-title h1 {
+  font-family: fantasy;
+  font-weight: 200;
+  text-transform: uppercase;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+/* My Work Container */
+.mywork-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.mywork-container img {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 419px;
+  height: 280px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.mywork-container img:hover {
+  transform: scale(1.1);
+  border: 2px solid #000000;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Show More Button */
+.show-more {
+  display: flex;
+  gap: 15px;
+  background-color: #202020;
+  color:#ffffff;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  transition: 0.6s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Ensure no visual overflow */
+}
+
+/* Hover Effect for Show More */
+.show-more:hover {
+  gap: 30px;
+  transform: scale(1.1);
+  transition: 0.6s;
+  color: #00bfff;  /* Change color on hover */
+  border-color: #ffffff;  /* Change border color */
+}
+
+/* Add Animation for Show More */
+.show-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.8), transparent);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;  /* Smooth opacity transition */
+}
+
+/* Show the gradient animation on hover */
+.show-more:hover::before {
+  opacity: 1; /* Show gradient */
+  animation: shine 0.8s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for Animation */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .mywork-title {
-    position: relative;
+  100% {
+    transform: translateX(100%);
   }
-  
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media (max-width: 768px) {
+  /* Title Adjustments */
   .mywork-title h1 {
-    color: #000000;
-    padding: 0 60px;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 30px;
+    padding: 0 30px;
   }
-  
+
+  /* My Work Grid Adjustments */
   .mywork-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+    gap: 20px;
   }
-  
+
   .mywork-container img {
-    box-sizing: border-box;
     width: 100%;
-    max-width: 419px;
-    height: 280px;
-    transition: 0.4s;
-    cursor: pointer;
+    max-width: 350px; /* Reduce image size */
+    height: auto;
   }
-  
-  .mywork-container img:hover {
-    transform: scale(1.1);
-    border: 2px solid #000000;
-    border-radius: 10px;
-    transition: 0.3s;
-  }
-  
-  /* Show More Button */
+
+  /* Show More Button Adjustments */
   .show-more {
+    color: #ffffff;
     display: flex;
+    background-color: #202020;
     gap: 15px;
     border-radius: 50px;
-    border: 2px solid #000000;
+    border: 2px solid #ff0000;
     padding: 15px 30px;
     font-size: 22px;
     font-weight: 500;
     margin-top: 30px;
     margin-bottom: 80px;
-    transition: 0.6s;
+    transition: color 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensure no visual overflow */
   }
-  
+
+  /* Hover Effect for Show More */
   .show-more:hover {
-    gap: 30px;
-    transform: scale(1.1);
-    transition: 0.6s;
+    border: 3px solid #ff0000;
+    font-weight: 550;
+    color: rgb(0, 191, 255);
   }
-  
-  /* Mobile and Tablet Responsive Styles */
-  @media (max-width: 768px) {
-    /* Title Adjustments */
-    .mywork-title h1 {
-      font-size: 30px;
-      padding: 0 30px;
-    }
-  
-    /* My Work Grid Adjustments */
-    .mywork-container {
-      grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
-      gap: 20px;
-    }
-  
-    .mywork-container img {
-      width: 100%;
-      max-width: 350px; /* Reduce image size */
-      height: auto;
-    }
-  
-    /* Show More Button Adjustments */
-    .show-more {
-      font-size: 18px; /* Adjust font size for smaller screens */
-      padding: 12px 25px;
-    }
+
+  /* Add Animation for Show More */
+  .show-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
+    opacity: 0; /* Initially hidden */
+    transition: none;
   }
-  
-  @media (max-width: 480px) {
-    /* Title Adjustments for very small screens */
-    .mywork-title h1 {
-      font-size: 25px;
-      padding: 0 20px;
+
+  .show-more:hover::before {
+    opacity: 1; /* Show gradient */
+    animation: shine 0.8s ease-in-out forwards; /* Trigger animation */
+  }
+
+  /* Keyframes for Animation */
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%);
     }
-  
-    /* My Work Grid Adjustments for very small screens */
-    .mywork-container {
-      grid-template-columns: 1fr; /* 1 column for very small screens */
-      gap: 15px;
-    }
-  
-    .mywork-container img {
-      width: 100%;
-      max-width: 280px; /* Further reduce image size */
-      height: auto;
-    }
-  
-    /* Show More Button Adjustments */
-    .show-more {
-      font-size: 16px; /* Adjust font size for smaller screens */
-      padding: 10px 20px;
+    100% {
+      transform: translateX(100%);
     }
   }
-  #work {
-    scroll-margin-top: 90px; /* Adjust this based on your navbar height */
+}
+
+@media (max-width: 480px) {
+  /* Title Adjustments for very small screens */
+  .mywork-title h1 {
+    font-size: 25px;
+    padding: 0 20px;
   }
-  
+
+  /* My Work Grid Adjustments for very small screens */
+  .mywork-container {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+    gap: 15px;
+  }
+
+  .mywork-container img {
+    width: 100%;
+    max-width: 280px; /* Further reduce image size */
+    height: auto;
+  }
+
+  /* Show More Button Adjustments */
+  .show-more {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 10px 20px;
+  }
+}
+
+/* Scroll Margin for Work Section */
+#work {
+  scroll-margin-top: 90px; /* Adjust this based on your navbar height */
+}

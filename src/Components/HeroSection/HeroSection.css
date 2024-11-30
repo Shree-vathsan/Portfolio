@@ -1,4 +1,10 @@
 /* Hero Section */
+* {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -12,26 +18,42 @@
 }
 
 /* Gradient Text for Hero */
-.hero h1 span {
+.hero  {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
+    color: #ffffff;
+    /* font-family: "Rancho", cursive; */
+    /* font-size: 30px; */
+    /* letter-spacing: 2px; */
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.hero p span {
     text-align: center;
     width: 70%;
-    font-size: 65px;
-    font-family: "Charm", cursive;
-    font-weight: 600;
+    font-size: 50px;
+    font-family: "Protest Revolution", sans-serif;
+    /* font-weight: 600; */
     color: transparent;
-    background: linear-gradient(to right, #242424, #787878); /* Gradient applied */
+    color: #00ccff;
     -webkit-background-clip: text; /* Webkit specific */
     background-clip: text; /* Standard property for background clip */
 }
 
 /* Hero Paragraph */
 .hero p {
-    width: 50%;
-    color: #000000;
+    margin-top: -10px;
+    width: 60%;
+    color: #ffffff;
     text-align: center;
-    font-size: 20px;
-    line-height: 25px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: "Protest Revolution", sans-serif; */
+    /* font-family: "Rancho", cursive; */
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 40px;
 }
 
 /* Hero Action Section */
@@ -49,51 +71,95 @@
     padding: 20px 40px;
     color: #ffffff;
     border-radius: 40px;
-    background: linear-gradient(264deg, #939391, #434343);
     cursor: pointer;
+    /* font-family: "Rancho", cursive; */
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    position: relative;
+    overflow: hidden; /* Ensure no visual overflow */
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Ensuring no underline on the link */
-.hero-connect a {
-    color: #ffffff;
-    text-decoration: none !important; /* Ensure no underline */
-    
+.hero-connect:hover {
+    border: 1px solid #00ccff;
+    font-weight: 600;
+    color: rgb(0, 191, 255);
 }
 
-.hero-connect a:visited {
-    text-decoration: none !important; /* No underline on visited links */
-    
+/* Add Animation for Hero Connect */
+.hero-connect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
+    opacity: 0; /* Initially hidden */
+    transition: none;
 }
 
-.hero-connect a:hover {
-    text-decoration: none !important; /* No underline on hover */
-    color:  rgb(0, 191, 255);
+.hero-connect:hover::before {
+    opacity: 1; /* Show gradient */
+    animation: shine 0.8s ease-in-out forwards; /* Trigger animation */
 }
 
 /* Hero Resume Button */
 .hero-resume {
     padding: 18px 60px;
-    border: 2px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 40px;
     cursor: pointer;
+    color: #ffffff;
+    /* font-family: "Rancho", cursive; */
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden; /* Ensure no visual overflow */
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Hover Effect for Hero Connect Button */
-.hero-connect:hover {
-    border: 1px solid #000000;
-    color:  rgb(0, 191, 255);
-    text-decoration: none;
-}
-
-/* Hover Effect for Hero Resume Button */
+/* Hover Effect for Hero Resume */
 .hero-resume:hover {
-    border: 3px solid #000000;
-    font-weight: 550;
+    border: 1px solid #00ccff;
+    font-weight: 600;
+    color: rgb(0, 191, 255);
+}
+
+/* Add Animation for Hero Resume */
+.hero-resume::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
+    opacity: 0; /* Initially hidden */
+    transition: none;
+}
+
+.hero-resume:hover::before {
+    opacity: 1; /* Show gradient */
+    animation: shine 1s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for Animation */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 /* Mobile-Responsive Styles */
-
-/* For small screens (mobile phones) */
 @media(max-width: 768px) {
 
     .hero {
@@ -107,7 +173,7 @@
 
     .hero p {
         width: 80%;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .hero-action {
@@ -118,11 +184,10 @@
 
     .hero-connect, .hero-resume {
         padding: 15px 35px;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
-/* For extra small screens (smaller mobile devices) */
 @media(max-width: 480px) {
 
     .hero h1 span {
@@ -132,7 +197,7 @@
 
     .hero p {
         width: 90%;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .hero-action {
@@ -141,7 +206,7 @@
 
     .hero-connect, .hero-resume {
         padding: 12px 30px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
