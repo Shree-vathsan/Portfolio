@@ -20,6 +20,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);  // Toggle the menu open/close state
   };
+  
 
   return (
     <div className="navbar">

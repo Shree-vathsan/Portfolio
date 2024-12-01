@@ -1,24 +1,24 @@
-import Url from '../Assets/Url.jpg'
-import TT from '../Assets/tictactoe.jpg'
-import Weather from '../Assets/Weather.jpg'
+import bookanalysis from '../Assets/ba.webp'
+import TTT from '../Assets/ttt.webp'
+import Weather from '../Assets/wa.webp'
 
 const mywork_data=[
     {
         w_no:1,
-        w_no:"Url Shortener",
-        w_img:TT
+        w_name:"Book Analysis with ML",
+        w_img:bookanalysis
 
     },
     {
         w_no:2,
-        w_no:"Tic-Tac-Toe",
-        w_img:TT
+        w_name:"Tic-Tac-Toe",
+        w_img:TTT
 
     },
     {
         w_no:3,
-        w_no:"Weather App",
-        w_img:TT
+        w_name:"Weather App",
+        w_img:Weather
     }
 
 ]

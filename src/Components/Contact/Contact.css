@@ -1,6 +1,13 @@
 /* Original CSS */
 
 /* Contact Section */
+* {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .contact {
     display: flex;
     flex-direction: column;
@@ -16,10 +23,15 @@
 }
 
 .contact-title h1 {
-    padding: 0px 30px;
-    font-size: 40px;
-    font-weight: 600;
-    color: #000000;
+    font-size: 50px;
+    display: flex;
+    color: #00ccff;
+    font-family: fantasy;
+    font-weight: 200;
+    text-transform: uppercase;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 /* Contact Section Layout */
@@ -38,16 +50,12 @@
 .contact-left h1 {
     font-size: 40px;
     font-weight: 700;
-    color: #3F2305;
-    background: linear-gradient(270deg, #000000 80%, #4a4a4a 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }
 
 .contact-left p {
     max-width: 500px;
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     line-height: 15px;
 }
@@ -78,7 +86,7 @@
 .contact-right label {
     font-size: 22px;
     font-weight: 500;
-    color: #000000;
+    color: #ffffff;
 }
 
 .contact-right input {
@@ -87,8 +95,8 @@
     height: 60px;
     padding-left: 20px;
     border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #313131;
+    color: #ffffff;
     font-family: Outfit;
     font-size: 18px;
 }
@@ -98,30 +106,77 @@
     border: none;
     padding: 25px;
     border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #313131;
+    color: #ffffff;
     font-family: Outfit;
     font-size: 18px;
 }
 
 /* Contact Submit Button */
-.contact-submit {
-    border: none;
-    color: #ffffff;
-    border-radius: 50px;
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 20px 60px;
-    margin-bottom: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    background: linear-gradient(264deg, #000000 -5.09%, #464646 106.28%);
+/* Contact Submit Button */
+/* Material Icons Styling */
+.material-icons {
+    font-size: 30px;
+    color: #00ccff;
+    vertical-align: middle;
 }
 
-.contact-submit:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
+/* Rest of the CSS remains unchanged */
+
+.contact-submit {
+    color: #ffffff;
+    display: flex;
+    background-color: #202020;
+    gap: 15px;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    transition: transform 0.4s ease, color 0.3s ease, border-color 0.3s ease; /* Added transform timing */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensure no visual overflow */
 }
+
+/* Hover Effect for Contact Submit */
+.contact-submit:hover {
+    border: 1px solid #00ccff;
+    font-weight: 550;
+    color: rgb(0, 191, 255);
+    transform: scale(1.05);
+}
+
+/* Add Animation for Contact Submit */
+.contact-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
+    opacity: 0; /* Initially hidden */
+    /* transition: 0.4s; */
+}
+
+.contact-submit:hover::before {
+    opacity: 1; /* Show gradient */
+    animation: shine 0.8s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for Animation */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 
 /* Mobile-Responsive Styles */
 
@@ -168,7 +223,8 @@
     }
 
     .contact-submit {
-        width: 100%;
+        width: 50%;
+        justify-content: center;
         padding: 15px 40px;
         font-size: 16px;
     }
@@ -202,9 +258,11 @@
 
     .contact-submit {
         padding: 12px 35px;
+        justify-content: center;
         font-size: 14px;
     }
 }
-#contact{
+
+#contact {
     scroll-margin-top: 90px; /* Adjust this value to match the navbar height */
 }

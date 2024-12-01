@@ -1,6 +1,19 @@
 /* Original CSS */
 
 /* Footer Section */
+
+.footer-top-left h1{
+    font-size: 30px;
+    display: flex;
+    color: #00ccff;
+    /* font-family: "Protest Revolution", sans-serif; */
+    font-family: fantasy;
+    font-weight: 200;
+    text-transform: uppercase;
+    justify-content: center;
+    letter-spacing: 1px;
+    /* margin-top: 20px; */
+}
 .footer {
     margin: 50px 170px;
     display: flex;
@@ -16,7 +29,7 @@
 
 /* Footer Top Left */
 .footer-top-left p {
-    font-size: 18px;
+    font-size: 16px;
     max-width: 400px;
 }
 
@@ -25,45 +38,57 @@
     display: flex;
     align-items: center;
     gap: 35px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
 /* Footer Email Input */
-.footer-email-input {
+/* .footer-email-input {
     display: flex;
     gap: 30px;
     padding: 15px 30px;
     border-radius: 50px;
-    background: #ffffff;
-}
+    background: #f;
+} */
 
-.footer-email-input input {
+/* .footer-email-input input {
     outline: none;
     border: none;
     background: transparent;
     color: #000000;
     font-family: Outfit;
     font-size: 16px;
-}
+} */
 
 /* Footer Bottom */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 11px;
 }
 
 /* Footer Bottom Right */
-.footer-bottom-right {
+#footer-bottom-left {
     display: flex;
     gap: 50px;
+    font-size: 16px;
     margin-bottom: 50px;
+    /* font-size: 16px; */
+}
+#footer-bottom-right p{
+    display:inline-flex;
+    gap: 50px;
+    margin-left: 10px;
+    font-size: 14px;
+
+    /* margin-left: 100px; */
+    /* margin-bottom: 50px; */
+    /* font-size: 16px; */
 }
 
-/* Hover Effect for Email Input */
+/* Hover Effect for Email Input
 .footer-email-input:hover {
     border: 2px solid #3f2305;
-}
+} */
 
 
 /* Mobile-Responsive Styles */
