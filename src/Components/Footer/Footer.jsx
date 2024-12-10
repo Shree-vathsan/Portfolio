@@ -1,6 +1,10 @@
 import React from 'react'
 import './Footer.css'
-import User from '../../Assets/user.png'
+// import User from '../../Assets/user.png'
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+
 
 const Footer = () => {
   return (
@@ -8,7 +12,33 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <h1>SV</h1>
+                    
                     {/* <p>Hi,Im Shreevathsan pursuing CSE(AIML) at CIT Chennai....</p> */}
+                </div>
+                <div className="footer-top-right">
+                    <a
+                        href="https://github.com/Shree-vathsan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-icon"
+                    >
+                        <GitHubIcon style={{ color: "#00ccff" }}/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/shreevathsan-r-91183625b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-icon"
+                    >
+                        <LinkedInIcon style={{ color: "#00ccff" }}/>
+                    </a>
+                    <a
+                        href="mailto:shreevathsan1904@gmail.com"
+                        className="footer-icon"
+                    >
+                        <EmailIcon style={{ color: "#00ccff" }}/>
+                    </a>
+
                 </div>
                 {/* <div className="footer-top-right"> */}
                     {/* <div className="footer-email-input">

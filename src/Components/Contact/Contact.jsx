@@ -1,5 +1,8 @@
 import React from "react";
 import "./Contact.css";
+import EmailIcon from "@mui/icons-material/Email";
+import CallIcon from "@mui/icons-material/Call";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -33,18 +36,18 @@ const Contact = () => {
       <div className="contact-section">
         <div className="contact-left">
           <h1>Let's Talk</h1>
-          <p>Tell me about your project</p>
+          {/* <p>Tell me about your proje</p> */}
           <div className="contact-details">
             <div className="contact-detail">
-              <span className="material-icons">email</span>
+              <span className="material-icons"><EmailIcon /></span>
               <p>shreevathsan1904@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <span className="material-icons">call</span>
+              <span className="material-icons"><CallIcon/></span>
               <p>7200016957</p>
             </div>
             <div className="contact-detail">
-              <span className="material-icons">location_on</span>
+              <span className="material-icons"><LocationOnIcon/></span>
               <p>Chennai, Tamilnadu</p>
             </div>
           </div>
