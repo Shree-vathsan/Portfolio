@@ -1,216 +1,144 @@
-/* Hero Section */
 * {
-    font-family: "Playfair Display", serif;
     font-size: 24px;
     font-weight: 500;
-}
-
-.hero {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .hero {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-}
-
-.hero img {
+  }
+  
+  .hero img {
     clip-path: circle();
     margin-top: 1.5em;
-}
-
-/* Gradient Text for Hero */
-.hero  {
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    
-    color: #ffffff;
-    /* font-family: "Rancho", cursive; */
-    /* font-size: 30px; */
-    /* letter-spacing: 2px; */
-    font-weight: 300;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
-
-.hero p span {
+  }
+  
+  .hero p span {
     text-align: center;
     width: 70%;
     font-size: 50px;
-    font-family: "Protest Revolution", sans-serif;
-    /* font-weight: 600; */
-    color: transparent;
-    color: #00ccff;
-    -webkit-background-clip: text; /* Webkit specific */
-    background-clip: text; /* Standard property for background clip */
-}
-
-/* Hero Paragraph */
-.hero p {
+    font-weight: 600;
+    color: #000000;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .hero p {
     margin-top: -10px;
     width: 60%;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
-    /* font-family: "Protest Revolution", sans-serif; */
-    /* font-family: "Rancho", cursive; */
     font-size: 24px;
-    letter-spacing: 1px;
     font-weight: 300;
     line-height: 40px;
-}
-
-/* Hero Action Section */
-.hero-action {
+  }
+  
+  .hero-action {
     display: flex;
     align-items: center;
     gap: 25px;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 50px;
-}
-
-/* Hero Connect Button */
-.hero-connect {
+  }
+  
+  .hero-connect,
+  .hero-resume {
     padding: 20px 40px;
-    color: #ffffff;
+    color: #000000;
     border-radius: 40px;
     cursor: pointer;
-    /* font-family: "Rancho", cursive; */
     font-size: 24px;
-    letter-spacing: 2px;
     font-weight: 300;
     text-decoration: none;
-    border: 1px solid #ffffff;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    border: 0.5px solid #000000;
     position: relative;
-    overflow: hidden; /* Ensure no visual overflow */
+    overflow: hidden;
     transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.hero-connect:hover {
-    border: 1px solid #00ccff;
+  }
+  
+  .hero-connect:hover,
+  .hero-resume:hover {
+    border-color: #505050;
     font-weight: 600;
-    color: rgb(0, 191, 255);
-}
-
-/* Add Animation for Hero Connect */
-.hero-connect::before {
+    color: rgb(0, 0, 0);
+  }
+  
+  .hero-connect::before,
+  .hero-resume::before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 300%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
-    opacity: 0; /* Initially hidden */
-    transition: none;
-}
-
-.hero-connect:hover::before {
-    opacity: 1; /* Show gradient */
-    animation: shine 0.8s ease-in-out forwards; /* Trigger animation */
-}
-
-/* Hero Resume Button */
-.hero-resume {
-    padding: 18px 60px;
-    border: 1px solid #ffffff;
-    border-radius: 40px;
-    cursor: pointer;
-    color: #ffffff;
-    /* font-family: "Rancho", cursive; */
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-weight: 300;
-    position: relative;
-    overflow: hidden; /* Ensure no visual overflow */
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Hover Effect for Hero Resume */
-.hero-resume:hover {
-    border: 1px solid #00ccff;
-    font-weight: 600;
-    color: rgb(0, 191, 255);
-}
-
-/* Add Animation for Hero Resume */
-.hero-resume::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(0, 191, 255, 0.4), transparent);
-    opacity: 0; /* Initially hidden */
-    transition: none;
-}
-
-.hero-resume:hover::before {
-    opacity: 1; /* Show gradient */
-    animation: shine 1s ease-in-out forwards; /* Trigger animation */
-}
-
-/* Keyframes for Animation */
-@keyframes shine {
+    background: linear-gradient(120deg, transparent, rgba(55, 55, 55, 0.6), transparent);
+    opacity: 0;
+  }
+  
+  .hero-connect:hover::before,
+  .hero-resume:hover::before {
+    opacity: 1;
+    animation: shine 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes shine {
     0% {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     100% {
-        transform: translateX(100%);
+      transform: translateX(100%);
     }
-}
-
-/* Mobile-Responsive Styles */
-@media(max-width: 768px) {
-
+  }
+  
+  @media (max-width: 768px) {
     .hero {
-        gap: 15px;
+      gap: 15px;
     }
-
-    .hero h1 span {
-        font-size: 50px;
-        width: 90%;
+    .hero p span {
+      font-size: 50px;
+      width: 90%;
     }
-
     .hero p {
-        width: 80%;
-        font-size: 18px;
+      width: 80%;
+      font-size: 18px;
     }
-
     .hero-action {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+      flex-direction: column;
+      gap: 20px;
     }
-
-    .hero-connect, .hero-resume {
-        padding: 15px 35px;
-        font-size: 18px;
+    .hero-connect,
+    .hero-resume {
+      padding: 15px 35px;
+      font-size: 18px;
     }
-}
-
-@media(max-width: 480px) {
-
-    .hero h1 span {
-        font-size: 40px;
-        width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    .hero p span {
+      font-size: 40px;
+      width: 100%;
     }
-
     .hero p {
-        width: 90%;
-        font-size: 18px;
+      width: 90%;
+      font-size: 18px;
     }
-
     .hero-action {
-        gap: 15px;
+      gap: 15px;
     }
-
-    .hero-connect, .hero-resume {
-        padding: 12px 30px;
-        font-size: 16px;
+    .hero-connect,
+    .hero-resume {
+      padding: 12px 30px;
+      font-size: 16px;
     }
-}
-
-/* Add scroll margin to the home section */
-#home {
-    scroll-margin-top: 80px; /* Adjust this value to match the navbar height */
-}
+  }
+  
+  #home {
+    scroll-margin-top: 80px;
+  }
+  

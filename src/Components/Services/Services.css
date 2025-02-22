@@ -1,165 +1,155 @@
-*{
-    font-family: "Playfair Display", serif;
+* {
+    /* font-family: "Playfair Display", serif; */
     font-size: 24px;
-}
-.services {
+  }
+  
+  .services {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    color: #ffffff;
+    /* gap: 30px; */
+    color: #000000;
     margin: 80px 170px;
-}
-
-.services-title {
+  }
+  
+  .services-title {
     position: relative;
-    
-}
-
-.services-title h1 {
+  }
+  
+  .services-title h1 {
     font-size: 50px;
     display: flex;
-    color: #00ccff;
-    /* font-family: "Protest Revolution", sans-serif; */
-    font-family: fantasy;
-    font-weight: 200;
+    color: #000000;
+    /* font-family: fantasy; */
+    font-weight: 700;
     text-transform: uppercase;
     justify-content: center;
-    letter-spacing: 1px;
     margin-top: 20px;
+  }
   
-}
-
-.services-format {
+  .services-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: #000000 1px solid;
     gap: 20px;
     padding: 50px;
     border-radius: 20px;
-    /* border: 2px solid #00ccff; */
-    /* transition: 0.4s; */
     cursor: pointer;
-    background-color: #313131;
-}
-
-.service-container {
+    background-color: #F9F9F9;
+  }
+  
+  .service-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 80px;
-    
-}
-
-.services-format h3 {
+  }
+  
+  .services-format h3 {
     font-size: 28px;
     font-weight: 600;
-}
-
-.services-format h2 {
+  }
+  
+  .services-format h2 {
     font-size: 30px;
-    font-weight: 800;
-    color: #00ccff;
-    /* background: linear-gradient(270deg, #000000 50%, #000000 100%); */
-    /* background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
-
-.services-format p {
-    color: #ffffff;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .services-format p {
+    color: #000000;
     font-size: 18px;
     line-height: 20px;
     max-width: 300px;
-}
-
-.services-readmore {
+  }
+  
+  .services-readmore {
     display: flex;
-    color: #ffffff;
+    color: #000000;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
-}
-
-.services-format:hover {
-    border: 1px solid #00ccff;
-    /* background-image: linear-gradient(45deg, #00000056 50%, #343434 100%); */
-    box-shadow: 0 0px 8px #00ccff;
+  }
+  
+  .services-format:hover {
+    border: 1px solid #000000;
+    box-shadow: 0 0px 20px #000000;
     transition: transform 0.8s, box-shadow 0.4s;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.4s;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .services {
-        margin: 50px 20px; /* Reduce margin for smaller screens */
+      margin: 50px 20px;
     }
-
+  
     .services-title h1 {
-        font-size: 28px; /* Smaller font size for the title */
-        padding: 0px 10px;
+      font-size: 28px;
+      padding: 0px 10px;
     }
-
+  
     .service-container {
-        grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+      grid-template-columns: 1fr 1fr;
     }
-
+  
     .services-format {
-        padding: 30px; /* Reduce padding for mobile */
+      padding: 30px;
     }
-
+  
     .services-format h3 {
-        font-size: 24px; /* Adjust font size for headings */
+      font-size: 24px;
     }
-
+  
     .services-format h2 {
-        font-size: 26px; /* Adjust font size for subheadings */
+      font-size: 26px;
     }
-
+  
     .services-format p {
-        font-size: 16px; /* Smaller font size for paragraphs */
-        max-width: 250px; /* Reduce the max-width for better readability */
+      font-size: 16px;
+      max-width: 250px;
     }
-
+  
     .services-readmore {
-        flex-direction: column; /* Stack the "Read More" button on mobile */
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-}
-
-/* Very small screen responsiveness (like mobile phones) */
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .services-title h1 {
-        font-size: 24px; /* Even smaller font size for the title */
+      font-size: 24px;
     }
-
+  
     .service-container {
-        grid-template-columns: 1fr; /* Single column for very small screens */
+      grid-template-columns: 1fr;
     }
-
+  
     .services-format {
-        padding: 20px; /* Further reduce padding */
+      padding: 20px;
     }
-
+  
     .services-format h3 {
-        font-size: 22px; /* Smaller font size for headings */
+      font-size: 22px;
     }
-
+  
     .services-format h2 {
-        font-size: 24px; /* Adjust font size for subheadings */
+      font-size: 24px;
     }
-
+  
     .services-format p {
-        font-size: 14px; /* Even smaller font size for paragraphs */
-        max-width: 200px; /* Reduce max-width for better readability */
+      font-size: 14px;
+      max-width: 200px;
     }
-
+  
     .services-readmore {
-        gap: 10px; /* Reduce gap between icons and text */
+      gap: 10px;
     }
-}
-#services {
-    scroll-margin-top: 50px; /* Adjust this value to match the navbar height */
-}
+  }
+  
+  #services {
+    scroll-margin-top: 50px;
+  }
+  

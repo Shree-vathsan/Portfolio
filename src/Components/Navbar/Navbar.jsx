@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import menu_icon from '../../Assets/menu.png';
 import menu_close from '../../Assets/menu_close.png';
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+</style>
 
 const Navbar = () => {
   const [menu, setMenu] = useState('home');

@@ -1,32 +1,27 @@
-/* Navbar Container */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 50px;
-  background-color: #202020;
-  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  background-color: #F9F9F9;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  height: 80px; /* Increased thickness */
+  height: 80px;
 }
 
-/* Add spacing below the navbar */
 .navbar + * {
-  margin-top: 90px; /* Adjust this value to match the navbar height */
+  margin-top: 90px;
 }
 
-/* Logo */
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #00ccff;
+  color: #000000;
   cursor: pointer;
 }
 
-/* Navbar Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -36,18 +31,16 @@
   padding: 0;
 }
 
-/* Navigation Links */
 .nav-menu p {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  color: rgb(255, 255, 255);
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 }
 
-/* Hover Effect - Underline */
 .nav-menu p::before {
   content: '';
   position: absolute;
@@ -55,7 +48,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #000000;
   visibility: hidden;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -67,56 +60,44 @@
 }
 
 .nav-menu p:hover {
-  color: rgb(0, 191, 255);
+  color: #00bfff;
 }
 
-/* Active Link */
 .nav-menu p.active {
-  color: rgb(0, 191, 255);
+  color: #00bfff;
 }
 
-/* Mobile Menu - Open Button */
-.nav-mob-open {
-  display: none;
-}
-
-/* Mobile Menu - Close Button */
+.nav-mob-open,
 .nav-mob-close {
   display: none;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .nav-menu {
-      position: fixed;
-      flex-direction: column;
-      align-items: flex-start;
-      top: 0;
-      right: 0;
-      background-color: #202020;
-      width: 250px;
-      height: 100%;
-      gap: 30px;
-      padding: 20px;
-      /* box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.2); */
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: 0;
+    background-color: #202020;
+    width: 250px;
+    height: 100%;
+    gap: 30px;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   .nav-menu.active {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
-  .nav-mob-open {
-      display: block;
-  }
-
+  .nav-mob-open,
   .nav-mob-close {
-      display: block;
-      align-self: flex-end;
+    display: block;
   }
 
   .navbar {
-      padding: 15px 20px;
+    padding: 15px 20px;
   }
 }

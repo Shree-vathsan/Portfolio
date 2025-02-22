@@ -4,6 +4,9 @@ import './Footer.css'
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+</style>
 
 
 const Footer = () => {
@@ -22,7 +25,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="footer-icon"
                     >
-                        <GitHubIcon style={{ color: "#00ccff" }}/>
+                        <GitHubIcon style={{ color: "#000000" }}/>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/shreevathsan-r-91183625b/"
@@ -30,13 +33,13 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="footer-icon"
                     >
-                        <LinkedInIcon style={{ color: "#00ccff" }}/>
+                        <LinkedInIcon style={{ color: "#000000" }}/>
                     </a>
                     <a
                         href="mailto:shreevathsan1904@gmail.com"
                         className="footer-icon"
                     >
-                        <EmailIcon style={{ color: "#00ccff" }}/>
+                        <EmailIcon style={{ color: "#000000" }}/>
                     </a>
 
                 </div>

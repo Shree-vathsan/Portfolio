@@ -2,7 +2,9 @@ import React from 'react';
 import './Services.css';
 import Services_Data from '../../Assets/services_data.js';
 import arrow_icon from '../../Assets/arrow_icon.svg';
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+</style>
 const Services = () => {
   return (
     <div id='services' className='services'>

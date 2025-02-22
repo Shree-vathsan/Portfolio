@@ -3,6 +3,9 @@ import "./Contact.css";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+</style>
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -67,5 +70,6 @@ const Contact = () => {
     </div>
   );
 };
+
 
 export default Contact;
