@@ -9,7 +9,7 @@ import Vathsan from '../../Assets/SV2.png';
 const HeroSection = () => {
   return (
     <div id='home' className='hero'>
-        <img src={Vathsan} alt="" height={450} width={350}/>
+        <img src={Vathsan} alt="" height={425} width={325}/>
         <p>Hi!, I'm<span> Shreevathsan</span></p>
         <p>Driven Computer Science Engineering student eager to create impactful digital solutions, combining creativity, technical skills, and a love for coding.</p>
         <div className="hero-action">
