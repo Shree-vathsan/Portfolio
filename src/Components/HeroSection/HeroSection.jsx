@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
-import Vathsan from '../../Assets/Vathsan.jpg';
+import Vathsan from '../../Assets/SV2.png';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 </style>
@@ -9,7 +9,7 @@ import Vathsan from '../../Assets/Vathsan.jpg';
 const HeroSection = () => {
   return (
     <div id='home' className='hero'>
-        <img src={Vathsan} alt="" height={350} width={275}/>
+        <img src={Vathsan} alt="" height={450} width={350}/>
         <p>Hi!, I'm<span> Shreevathsan</span></p>
         <p>Driven Computer Science Engineering student eager to create impactful digital solutions, combining creativity, technical skills, and a love for coding.</p>
         <div className="hero-action">
