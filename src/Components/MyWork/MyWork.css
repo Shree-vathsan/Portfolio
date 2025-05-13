@@ -83,12 +83,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+  display: flex;
 }
 
 .mywork-container img {
   box-sizing: border-box;
   width: 100%;
-  max-width: 419px;
+  max-width: 288px;
   height: 280px;
   transition: 0.4s;
   cursor: pointer;

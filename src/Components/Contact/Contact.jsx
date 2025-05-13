@@ -38,7 +38,7 @@ const Contact = () => {
       </div>
       <div className="contact-section">
         <div className="contact-left">
-          <h1>Let's Talk</h1>
+          <h1>Contact Info</h1>
           {/* <p>Tell me about your proje</p> */}
           <div className="contact-details">
             <div className="contact-detail">
