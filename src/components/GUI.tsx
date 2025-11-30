@@ -11,16 +11,16 @@ import { education } from '../data/education';
 export const GUI: React.FC = () => {
     const { setViewMode } = useTerminal();
     return (
-        <div className="w-full h-screen bg-[#E0E7FF] text-black font-sans overflow-y-auto p-8">
+        <div className="w-full h-screen bg-[#E0E7FF] text-black font-sans overflow-y-auto overflow-x-hidden p-2 md:p-8">
             <div className="max-w-7xl mx-auto">
                 {/* Header / Nav */}
-                <div className="flex justify-between items-center mb-12">
-                    <h1 className="text-4xl font-black tracking-tighter">
-                        PORTFOLIO<span className="text-[#4F46E5]">.EXE</span>
+                <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 gap-4">
+                    <h1 className="text-2xl md:text-4xl font-black tracking-tighter text-center md:text-left">
+                        Vaths<span className="text-[#4F46E5]">.EXE</span>
                     </h1>
                     <button
                         onClick={() => setViewMode('terminal')}
-                        className="bg-black text-white px-6 py-3 font-bold hover:bg-[#4F46E5] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out border-2 border-black"
+                        className="bg-black text-white px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-bold hover:bg-[#4F46E5] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out border-2 border-black"
                     >
                         RETURN TO TERMINAL
                     </button>
@@ -29,27 +29,27 @@ export const GUI: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up">
 
                     {/* Hero Card */}
-                    <div className="md:col-span-2 bg-[#A5B4FC] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
-                        <h2 className="text-6xl font-black mb-4">HELLO, I'M {profile.name.toUpperCase()}.</h2>
-                        <p className="text-xl font-bold mb-6">{profile.role}</p>
+                    <div className="w-full md:col-span-2 bg-[#A5B4FC] p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl overflow-hidden">
+                        <h2 className="text-3xl md:text-6xl font-black mb-4 break-words hyphens-auto">HELLO, I'M {profile.name.toUpperCase()}.</h2>
+                        <p className="text-base md:text-xl font-bold mb-6 break-words">{profile.role}</p>
                         <div className="flex gap-4">
                         </div>
                     </div>
                     {/* Stats / Quick Info */}
-                    <div className="bg-[#FCD34D] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl flex flex-col justify-center items-center text-center">
-                        <div className="text-5xl font-black mb-2">{education.cgpa}</div>
-                        <div className="font-bold text-xl">CGPA</div>
-                        <div className="mt-4 text-sm font-bold">{education.institution}</div>
+                    <div className="w-full bg-[#FCD34D] p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl flex flex-col justify-center items-center text-center">
+                        <div className="text-4xl md:text-5xl font-black mb-2">{education.cgpa}</div>
+                        <div className="font-bold text-lg md:text-xl">CGPA</div>
+                        <div className="mt-4 text-xs md:text-sm font-bold">{education.institution}</div>
                     </div>
                     {/* Projects Section */}
                     <div className="md:col-span-3">
-                        <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform -rotate-1">PROJECTS</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-h-[600px] overflow-y-auto pr-2 border-4 border-black p-4 bg-white rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                        <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:-rotate-1">PROJECTS</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-h-[400px] md:max-h-[600px] overflow-y-auto pr-2 border-4 border-black p-4 bg-white rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                             {projects.map((project, index) => (
                                 <div key={index} className="group relative">
                                     {/* Small Card (Default) */}
-                                    <div className="h-full bg-[#F472B6] p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl transition-all duration-300 ease-in-out group-hover:opacity-0">
-                                        <h4 className="text-2xl font-black mb-2">{project.title}</h4>
+                                    <div className="h-full bg-[#F472B6] p-4 md:p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl transition-all duration-300 ease-in-out group-hover:opacity-0">
+                                        <h4 className="text-xl md:text-2xl font-black mb-2 break-words">{project.title}</h4>
                                         <p className="font-bold mb-4">{project.subtitle}</p>
                                         <div className="flex flex-wrap gap-2">
                                             {project.tags.map(tag => (
@@ -80,13 +80,13 @@ export const GUI: React.FC = () => {
                     </div>
                     {/* Experience Section */}
                     <div className="md:col-span-3 mt-8">
-                        <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform rotate-1">EXPERIENCE</h3>
+                        <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:rotate-1">EXPERIENCE</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {experience.map((exp, index) => (
                                 <div key={index} className="group relative">
                                     {/* Small Card */}
-                                    <div className="h-full bg-[#34D399] p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl transition-all duration-300 ease-in-out group-hover:opacity-0">
-                                        <h4 className="text-2xl font-black mb-1">{exp.role}</h4>
+                                    <div className="h-full bg-[#34D399] p-4 md:p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl transition-all duration-300 ease-in-out group-hover:opacity-0">
+                                        <h4 className="text-xl md:text-2xl font-black mb-1 break-words">{exp.role}</h4>
                                         <p className="font-bold text-sm mb-4">{exp.company}</p>
                                         <span className="bg-black text-white text-xs px-2 py-1 font-bold">{exp.period}</span>
                                     </div>
@@ -111,8 +111,8 @@ export const GUI: React.FC = () => {
                     </div>
                     {/* Skills Section */}
                     <div className="md:col-span-3 mt-8">
-                        <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform -rotate-1">SKILLS</h3>
-                        <div className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
+                        <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:-rotate-1">SKILLS</h3>
+                        <div className="w-full bg-white p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
                             <div className="space-y-6">
                                 {guiSkills.map((category, index) => (
                                     <div key={index}>
@@ -129,8 +129,8 @@ export const GUI: React.FC = () => {
                     </div>
                     {/* Certificates Section */}
                     <div className="md:col-span-3 mt-8">
-                        <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform rotate-1">CERTIFICATIONS</h3>
-                        <div className="bg-[#FCD34D] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
+                        <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:rotate-1">CERTIFICATIONS</h3>
+                        <div className="w-full bg-[#FCD34D] p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
                             <ul className="space-y-4">
                                 {certificates.map((cert, index) => (
                                     <li key={index} className="bg-white p-4 border-2 border-black font-bold flex items-center gap-4">
@@ -143,8 +143,8 @@ export const GUI: React.FC = () => {
                     </div>
                     {/* Achievements Section */}
                     <div className="md:col-span-2 mt-8">
-                        <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform rotate-1">ACHIEVEMENTS</h3>
-                        <div className="bg-[#A5B4FC] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
+                        <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:rotate-1">ACHIEVEMENTS</h3>
+                        <div className="w-full bg-[#A5B4FC] p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl">
                             <ul className="space-y-4">
                                 {guiAchievements.map((achievement, index) => (
                                     <li key={index} className="bg-white p-4 border-2 border-black flex items-center gap-4">
@@ -162,8 +162,8 @@ export const GUI: React.FC = () => {
                     <div className="md:col-span-1 flex flex-col gap-6 mt-8">
                         {/* Contact Section */}
                         <div>
-                            <h3 className="text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 transform -rotate-1">CONTACT</h3>
-                            <div className="bg-[#F472B6] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl flex flex-col justify-between">
+                            <h3 className="text-2xl md:text-4xl font-black mb-6 text-white bg-black inline-block px-4 py-2 md:transform md:-rotate-1">CONTACT</h3>
+                            <div className="w-full bg-[#F472B6] p-4 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-xl flex flex-col justify-between">
                                 <div className="space-y-4">
                                     <a href="mailto:shreevathsan1904@gmail.com" className="block bg-white p-4 border-2 border-black font-black hover:translate-x-1 hover:translate-y-1 transition-transform duration-300 ease-in-out text-center">
                                         SEND EMAIL
