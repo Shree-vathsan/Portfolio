@@ -6,7 +6,7 @@ interface TerminalLayoutProps {
 
 export const TerminalLayout: React.FC<TerminalLayoutProps> = ({ children }) => {
     return (
-        <div className="w-[800px] h-[600px] bg-terminal-bg rounded-lg shadow-2xl overflow-hidden flex flex-col font-mono border border-gray-800 resize-both min-w-[400px] min-h-[300px]">
+        <div className="w-full max-w-[800px] h-[80vh] md:h-[600px] bg-terminal-bg rounded-lg shadow-2xl overflow-hidden flex flex-col font-mono border border-gray-800 resize-both min-w-[300px] min-h-[300px]">
             {/* Window Title Bar */}
             <div className="h-8 bg-[#1f2335] flex items-center px-4 space-x-2 border-b border-gray-800">
                 <div className="w-3 h-3 rounded-full bg-terminal-red hover:bg-red-600 transition-colors cursor-pointer"></div>

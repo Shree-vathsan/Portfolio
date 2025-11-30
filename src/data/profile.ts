@@ -2,8 +2,7 @@ export const profile = {
     name: "Shreevathsan R",
     role: "Software Developer | AI & ML Enthusiast | Full Stack Developer",
     about: [
-        "I am a Computer Science student specializing in AI & ML at Chennai Institute of Technology.",
-        "Passionate about Cybersecurity and Full Stack Development. I have experience in building scalable web applications and securing digital assets."
+        "Aspiring software developer specializing in [[full-stack]], [[AI]], and [[ML]]. I build [[scalable apps]], [[optimize systems]], and love turning complex problems into [[clean solutions]]."
     ],
     contact: {
         email: "shreevathsan1904@gmail.com",

@@ -85,7 +85,7 @@ export const Terminal: React.FC = () => {
                             <span className="text-terminal-cyan">~</span>
                             <span className="text-terminal-text">{item.command}</span>
                         </div>
-                        <div className="pl-6 mb-2">
+                        <div className="pl-6 mb-2 break-words whitespace-pre-wrap">
                             {item.output}
                         </div>
                     </div>

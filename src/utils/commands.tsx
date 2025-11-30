@@ -8,6 +8,16 @@ import { education } from '../data/education';
 import { volunteers } from '../data/volunteers';
 import { profile } from '../data/profile';
 
+const parseText = (text: string) => {
+    const parts = text.split(/(\[\[.*?\]\])/g);
+    return parts.map((part, index) => {
+        if (part.startsWith('[[') && part.endsWith(']]')) {
+            return <span key={index} className="text-terminal-yellow font-bold">{part.slice(2, -2)}</span>;
+        }
+        return part;
+    });
+};
+
 export const commands: Record<string, (args: string[]) => React.ReactNode> = {
     help: () => (
         <div className="space-y-2 text-terminal-text">
@@ -122,7 +132,7 @@ export const commands: Record<string, (args: string[]) => React.ReactNode> = {
         <div className="max-w-2xl space-y-4">
             {profile.about.map((paragraph, index) => (
                 <p key={index}>
-                    {paragraph}
+                    {parseText(paragraph)}
                 </p>
             ))}
         </div>
