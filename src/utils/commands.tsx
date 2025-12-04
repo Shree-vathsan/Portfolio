@@ -5,7 +5,7 @@ import { skills } from '../data/skills';
 import { certificates } from '../data/certificates';
 import { achievements } from '../data/achievements';
 import { education } from '../data/education';
-import { volunteers } from '../data/volunteers';
+import { volunteers } from '../data/volunteering';
 import { profile } from '../data/profile';
 
 const parseText = (text: string) => {
@@ -37,7 +37,7 @@ export const commands: Record<string, (args: string[]) => React.ReactNode> = {
                 <span>My projects</span>
                 <span className="text-terminal-yellow">certificates</span>
                 <span>Certifications</span>
-                <span className="text-terminal-yellow">volunteers</span>
+                <span className="text-terminal-yellow">volunteering</span>
                 <span>Volunteering</span>
                 <span className="text-terminal-yellow">achievements</span>
                 <span>Achievements & CP</span>
@@ -72,7 +72,7 @@ export const commands: Record<string, (args: string[]) => React.ReactNode> = {
             </ul>
         </div>
     ),
-    volunteers: () => (
+    volunteering: () => (
         <div className="space-y-4">
             {volunteers.map((vol, index) => (
                 <div key={index}>
