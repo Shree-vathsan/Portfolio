@@ -6,7 +6,7 @@ This is the source code for my personal portfolio website, where I showcase my p
 
 ## 🛠 Tech Stack
 
-- **Framework:** Next.js
+- **Framework:** React js
 - **Styling:** Tailwind CSS
 - **Deployment:** Vercel
 
